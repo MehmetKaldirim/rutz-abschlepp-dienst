@@ -38,7 +38,7 @@ export default function Footer() {
         <img
           src={logo}
           alt="Logo"
-          className="mx-auto md:mx-0 w-[180px] h-[76px] object-fill"
+          className="mx-auto md:mx-0 w-[130px] h-[76px] object-fill"
         />
       </div>
 
