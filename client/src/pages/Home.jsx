@@ -17,7 +17,6 @@ export default function Home() {
         <UnsereLeistungen />
         <Wie />
         <Testimonials />
-        <UnsereArbeit />
       </Suspense>
     </div>
   );

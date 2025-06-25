@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiPhone, FiArrowUp } from "react-icons/fi";
-import logo from "../assets/footer-image.png";
+import logo from "../assets/tolga-4.png";
 
 export default function Footer() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -35,7 +35,11 @@ export default function Footer() {
     <div className="bg-white flex flex-col md:flex-row justify-between items-center md:items-center mx-5 my-4">
       {/* First Column: Symbol */}
       <div className="flex justify-center md:justify-start w-full md:w-auto">
-        <img src={logo} alt="" className="mx-auto md:mx-0" />
+        <img
+          src={logo}
+          alt="Logo"
+          className="mx-auto md:mx-0 w-[180px] h-[76px] object-fill"
+        />
       </div>
 
       {/* Second Column: Links */}

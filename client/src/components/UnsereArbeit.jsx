@@ -45,7 +45,7 @@ const UnsereArbeit = () => {
       {/* First Row: Heading */}
       <div className="py-12">
         <h2 className="text-4xl font-bold text-yellow-400 text-center">
-          Unsere Arbeit
+          Unsere YYYArbeit
         </h2>
       </div>
 

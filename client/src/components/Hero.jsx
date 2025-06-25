@@ -75,8 +75,8 @@ const Hero = () => {
               Wir sind rund um die Uhr für Sie da – egal ob Panne, Unfall oder
               Falschparker. Mit modernen Fahrzeugen und erfahrenem Personal
               sorgen wir für einen schnellen und sicheren Abschleppservice.
-              Vertrauen Sie auf unsere Zuverlässigkeit und unseren
-              deutschlandweiten Einsatz.
+              Vertrauen Sie auf unsere Zuverlässigkeit und unseren bundesweiten
+              Einsatz.
             </p>
           </div>
           <button
@@ -147,7 +147,7 @@ const Hero = () => {
           </div>
           <div className="pb-4 mb-4 mx-4 md:mx-0">
             <h2 className="text-2xl mb-2 text-left">Kontakt</h2>
-            <p className="text-sm text-left">info@my-elektro.online</p>
+            <p className="text-sm text-left">rutz-abschleppdienst@outlook.de</p>
             <p className="text-sm font-bold text-left">+49 176 83396077</p>
           </div>
         </div>

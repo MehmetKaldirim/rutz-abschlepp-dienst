@@ -6,6 +6,8 @@ import jwt from "jsonwebtoken";
 export const signup = async (req, res, next) => {
   const { username, email, password } = req.body;
 
+  console.log("📥 Gelen signup verisi:", req.body);
+
   if (
     !username ||
     !email ||
@@ -14,21 +16,23 @@ export const signup = async (req, res, next) => {
     email === "" ||
     password === ""
   ) {
-    next(errorHandler(400, "All fields are required"));
+    console.log("❌ Eksik alanlar:", { username, email, password });
+    return next(errorHandler(400, "All fields are required")); // <-- burada return şart
   }
 
-  const hashedPassword = bcryptjs.hashSync(password, 10);
-
-  const newUser = new User({
-    username,
-    email,
-    password: hashedPassword,
-  });
-
   try {
+    const hashedPassword = bcryptjs.hashSync(password, 10);
+
+    const newUser = new User({
+      username,
+      email,
+      password: hashedPassword,
+    });
+
     await newUser.save();
     res.json("Signup successful");
   } catch (error) {
+    console.error("❌ Signup sırasında hata:", error);
     next(error);
   }
 };
