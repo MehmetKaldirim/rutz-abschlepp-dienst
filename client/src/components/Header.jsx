@@ -75,9 +75,6 @@ const Header = () => {
         <Link to="/" className="hover:underline">
           Home
         </Link>
-        <Link to="/leistungen" className="hover:underline">
-          Leistungen
-        </Link>
         <Link to="/uber" className="hover:underline">
           Über
         </Link>
@@ -142,13 +139,6 @@ const Header = () => {
             onClick={toggleMenu}
           >
             Home
-          </Link>
-          <Link
-            to="/leistungen"
-            className="text-gray-800 hover:underline"
-            onClick={toggleMenu}
-          >
-            Leistungen
           </Link>
           <Link
             to="/uber"

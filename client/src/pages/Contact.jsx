@@ -22,19 +22,20 @@ const Contact = () => {
     general: "",
   });
 
+  // Abschleppdienst'e uygun hizmet seçenekleri
   const services = [
-    "Photovoltaik",
-    "MSR",
-    "Installation",
-    "Geräteprüfung",
-    "Etwas anderes",
+    "Abschleppdienst",
+    "Pannenhilfe",
+    "Fahrzeugbergung",
+    "Fahrzeugtransport",
+    "Sonstiges",
   ];
 
   const handleServiceClick = (service) => {
     setSelectedService(service);
     setShowOptions(false);
     setFormData({ ...formData, service });
-    setErrors({ ...errors, service: "" }); // Clear service error when selected
+    setErrors({ ...errors, service: "" });
   };
 
   const handleFocus = (field) => {
@@ -47,7 +48,7 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // Clear error on input change
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleSubmit = async (e) => {
@@ -65,19 +66,17 @@ const Contact = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        // Handle field-specific errors returned from the server
         setErrors({
           ...errors,
-          ...data.errors, // Populate specific field errors
+          ...data.errors,
         });
         return;
       }
 
-      // On success
-      toast.success(data.msg); // Show success message with toast
-      setFormData({ name: "", telefon: "", service: "" }); // Reset the form
-      setSelectedService(""); // Reset service selection
-      setErrors({ name: "", telefon: "", service: "", general: "" }); // Clear errors
+      toast.success(data.msg);
+      setFormData({ name: "", telefon: "", service: "" });
+      setSelectedService("");
+      setErrors({ name: "", telefon: "", service: "", general: "" });
     } catch (error) {
       setErrors({
         ...errors,
@@ -95,7 +94,7 @@ const Contact = () => {
         <div className="w-full md:w-1/2 bg-white p-6 shadow-lg flex flex-col justify-between">
           <div className="p-10">
             <h2 className="text-4xl mb-6">
-              Erzählen Sie <br /> uns mehr
+              Kontaktieren Sie uns <br /> für schnelle Hilfe
             </h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Name Input */}
@@ -194,11 +193,11 @@ const Contact = () => {
                   type="submit"
                   className="bg-yellow-400 text-white px-4 py-3 rounded-3xl font-semibold hover:bg-yellow-500 transition-colors duration-300"
                 >
-                  Kostenvoranschlag einholen
+                  Hilfe anfordern
                 </button>
               </div>
 
-              {/* General Error Message Display */}
+              {/* General Error Message */}
               {errors.general && (
                 <div className="mt-4 text-red-500 text-sm">
                   {errors.general}
@@ -220,14 +219,15 @@ const Contact = () => {
             {/* Einsatzbereich */}
             <div className="border-b-2 border-white pb-12 mb-12">
               <h3 className="text-2xl font-bold mb-2">Einsatzbereich</h3>
-              <p className="text-lg">Deutschlandweit</p>
+              <p className="text-lg">Bundesweit</p>
             </div>
 
             {/* Kontakt */}
             <div>
               <h3 className="text-2xl font-bold mb-2">Kontakt</h3>
-              <p className="text-lg">info@my-elektro-online.de</p>
-              <p className="text-lg">+49 201 45894463</p>
+              <p className="text-lg">info@abschleppdienst-herne.de</p>
+              <p className="text-lg">+49 155 663 00110</p>
+              <p className="text-lg">Haydnstrasse, 44649 Herne</p>
             </div>
           </div>
         </div>

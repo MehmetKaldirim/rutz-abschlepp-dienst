@@ -8,7 +8,7 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { app } from "../firebase";
-import bgImage from "../assets/bg2.png";
+import bgImage from "../assets/tolga-2.jpg";
 import defaultAvatar from "../assets/defaultAvatar.png";
 
 const Testimonials = () => {

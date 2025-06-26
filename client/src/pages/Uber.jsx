@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import certi from "../assets/certi.png";
-import bgImage from "../assets/bg3.jpg";
+import bgImage from "../assets/tolga-11.jpeg";
 import FeedbackCard from "../components/FeedbackCard";
 import partner1 from "../assets/partner1.png";
 import partner2 from "../assets/partner2.png";
@@ -9,6 +8,7 @@ export default function Uber() {
   const [comments, setComments] = useState([]);
   const [showMore, setShowMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+
   const fetchComments = async () => {
     try {
       const res = await fetch(`/api/comment/getApproved`);
@@ -39,67 +39,20 @@ export default function Uber() {
         <h2 className="text-5xl text-center">Über Uns</h2>
       </div>
 
-      {/* Zertifizierungen Section */}
-      <div className="flex flex-col bg-yellow-400 py-10 items-center justify-center">
-        <h2 className="text-5xl mb-8">Zertifizierungen</h2>
-
-        <div className="shadow-md flex flex-col md:flex-row bg-yellow-400 justify-between">
-          {/* Column 1 */}
-          <div className="flex-1 flex flex-col justify-center items-center bg-white px-10 py-10 md:px-20 md:mr-6 min-w-[250px]">
-            <img
-              src={certi}
-              alt="TÜV geprüfter Solartechniker"
-              className="h-20 w-auto mb-4"
-            />
-            <h3 className="font-semibold px-6 text-center whitespace-nowrap">
-              TÜV geprüfter Solartechniker
-            </h3>
-          </div>
-
-          {/* Column 2 */}
-          <div className="flex-1 flex flex-col justify-center items-center bg-white px-20 py-10 my-10 md:my-0 md:mx-6 min-w-[250px]">
-            <img
-              src={certi}
-              alt="TÜV geprüfter Solartechniker"
-              className="h-20 w-auto mb-4"
-            />
-            <h3 className="font-semibold px-6 text-center whitespace-nowrap">
-              HWK Meisterabschluss
-            </h3>
-          </div>
-
-          {/* Column 3 */}
-          <div className="flex-1 flex flex-col justify-center items-center bg-white px-20 py-10 md:ml-6 min-w-[250px]">
-            <img
-              src={certi}
-              alt="TÜV geprüfter Solartechniker"
-              className="h-20 w-auto mb-4"
-            />
-            <h3 className="font-semibold px-6 text-center whitespace-nowrap">
-              KNX Partner
-            </h3>
-          </div>
+      {/* Intro Text for Abschleppdienst */}
+      <div className="flex flex-col bg-yellow-400 py-20 items-center justify-center">
+        <div className="max-w-4xl px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white leading-relaxed">
+            Wir sind Ihr zuverlässiger Partner, wenn es um Abschleppdienste
+            geht. Ob Panne, Unfall oder Fahrzeug ohne TÜV – wir sind rund um die
+            Uhr für Sie da. Schnell, günstig und professionell – mit uns sind
+            Sie immer auf der sicheren Seite. Kontaktieren Sie uns jederzeit –
+            wir helfen Ihnen sofort weiter!
+          </h2>
         </div>
       </div>
-      {/* Row 3 */}
-      <div className="bg-white flex flex-col py-20">
-        <h2 className="text-3xl text-center">Wieso Wir</h2>
-        <div className="flex flex-col md:flex-row pt-10 items-center justify-center">
-          <div className="flex flex-col">
-            <h2 className="text-5xl text-yellow-400 text-center">10</h2>
-            <h2 className="text-center">jährige Erfahrung</h2>
-          </div>
-          <div className="flex flex-col my-10 md:my-0 md:mx-10">
-            <h2 className="text-5xl text-yellow-400 text-center"> &gt;500 </h2>
-            <h2 className="text-center">Elfogreiche Projekte betreut</h2>
-          </div>
-          <div className="flex flex-col">
-            <h2 className="text-5xl text-yellow-400 text-center">100%</h2>
-            <h2 className="text-center">Meisterarbeit</h2>
-          </div>
-        </div>
-      </div>
-      {/* Row 3 */}
+
+      {/* Kundenfeedback */}
       <div
         id="clients"
         className="flex flex-col items-center relative"
@@ -135,7 +88,8 @@ export default function Uber() {
           </button>
         )}
       </div>
-      {/*Partner */}
+
+      {/* Partner */}
       <div className="bg-white flex flex-col py-20">
         <h2 className="text-4xl py-10 text-center">Partner</h2>
         <div className="flex md:justify-between mx-auto">
