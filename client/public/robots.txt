@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rutz-abschlepp-dienst-herne-5efbd1efb878.herokuapp.com/sitemap.xml
