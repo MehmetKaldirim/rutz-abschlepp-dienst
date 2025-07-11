@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="flex flex-col">
             <h1 className="text-2xl lg:text-6xl mb-4 mt-20 lg:mt-48 text-left">
               Ihr <br /> Abschleppdienst <br /> aus{" "}
-              <span className="text-yellow-300">Herne</span>
+              <span className="text-red-500">Herne</span>
             </h1>
             <p className="text-xl text-white text-left">
               Wir sind rund um die Uhr für Sie da – egal ob Panne, Unfall oder
@@ -50,10 +50,10 @@ const Hero = () => {
             </p>
           </div>
           <button
-            className="flex items-center justify-center w-full md:w-auto px-4 py-2 my-12 border border-white text-white hover:bg-white hover:text-yellow-300 transition-colors duration-300 rounded-3xl"
+            className="flex items-center justify-center w-full md:w-auto px-4 py-2 my-12 border border-white text-white hover:bg-white hover:text-red-500 transition-colors duration-300 rounded-3xl"
             onClick={handleCallClick}
           >
-            <FiPhone className="mr-2 text-gray-500 fill-current" />
+            <FiPhone className="mr-2 text-red-500 fill-current" />
             Jetzt Anrufen
           </button>
         </div>
