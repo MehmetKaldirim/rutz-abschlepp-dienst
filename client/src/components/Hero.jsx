@@ -42,11 +42,16 @@ const Hero = () => {
               <span className="text-red-500">Herne</span>
             </h1>
             <p className="text-xl text-white text-left">
-              Wir sind rund um die Uhr für Sie da – egal ob Panne, Unfall oder
-              Falschparker. Mit modernen Fahrzeugen und erfahrenem Personal
-              sorgen wir für einen schnellen und sicheren Abschleppservice.
-              Vertrauen Sie auf unsere Zuverlässigkeit und unseren bundesweiten
-              Einsatz.
+              Wir sind rund um die Uhr für Sie im Einsatz – ob bei einer Panne,
+              einem Unfall oder technischen Problemen. Mit unserem modernen
+              Fuhrpark und geschultem Fachpersonal bieten wir Ihnen einen
+              schnellen, sicheren und professionellen Abschleppdienst. Unser
+              Service überzeugt nicht nur durch Zuverlässigkeit und Kompetenz,
+              sondern auch durch faire und transparente Preise. Dank unserer
+              bundesweiten Einsatzbereitschaft sind wir stets in Ihrer Nähe und
+              helfen Ihnen schnell weiter – egal wann, egal wo. Verlassen Sie
+              sich auf einen Abschleppdienst, der Qualität, Sicherheit und
+              Kundenzufriedenheit an erste Stelle setzt.
             </p>
           </div>
           <button
